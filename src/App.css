@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+.header {
+  padding: 1%;
+  background-color: olive;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.subscribe {
+  margin-top: 1%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonDiv {
   display: flex;
-  flex-direction: column;
+  justify-content: center; /* Center buttons instead of uneven spacing */
+  gap: 1rem; /* Adds clean spacing between buttons */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  width: 100%; /* Use full width for flexibility */
+  max-width: 800px; /* Prevents buttons from stretching too wide */
+  margin: 1.5rem auto; /* Centers container with nice spacing */
+  padding: 1rem;
+  border-radius: 12px; /* Rounded edges for a softer look */
+  background: #f8f9fa; /* Subtle light background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
 }
 
-.App-link {
-  color: #61dafb;
+.buttonDiv button {
+  min-width: 120px; /* Keeps buttons a consistent size */
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttonDiv button:hover {
+  transform: translateY(-2px); /* Small hover lift */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 600px) {
+  .buttonDiv {
+    flex-direction: column;
+    gap: 0.8rem; /* Reduce gap for vertical stacking */
+    padding: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .buttonDiv button {
+    width: 100%; /* Full width buttons on mobile */
+    max-width: 300px;
   }
 }
