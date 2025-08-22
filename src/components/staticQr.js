@@ -13,14 +13,17 @@ export default function GenerateQrForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://unified-billing-api.vercel.app/auth/generateQr", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": localStorage.getItem("apiKey"),
-        },
-        body: JSON.stringify({ amount }),
-      });
+      const response = await fetch(
+        "https://unified-billing-api.vercel.app/auth/generateQr",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-api-key": localStorage.getItem("apiKey"),
+          },
+          body: JSON.stringify({ amount }),
+        }
+      );
 
       if (!response.ok)
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -61,10 +64,13 @@ export default function GenerateQrForm() {
       style={{ marginTop: "1px" }}
     >
       <Toast ref={toast} />
-      <Card title="Generate UPI QR" className="w-6">
-        <form onSubmit={handleSubmit} className="p-fluid">
-          <div className="field mb-3">
-            <label htmlFor="amount">Amount (INR)</label>
+      <Card
+        title="Generate UPI QR"
+        className="w-6"
+        style={{ alignItems: "center" }}
+      >
+        <form onSubmit={handleSubmit} className="staticQr">
+          <div>
             <InputNumber
               id="amount"
               value={amount}

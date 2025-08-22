@@ -5,9 +5,6 @@ import OtpForm from "./components/validateOtp";
 import GenerateQrForm from "./components/staticQr";
 import DynamicQr from "./components/dyanmicQr";
 import SendBillForm from "./components/billing";
-import "primereact/resources/themes/lara-light-blue/theme.css";
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
 import { Button } from "primereact/button";
 
 function App() {
@@ -63,19 +60,10 @@ function App() {
       )}
       {!subscribeFlag && (
         <div className="buttonDiv">
-          <Button
-            label="Generate Dynamic Qr "
-            icon="pi pi-check"
-            onClick={onDynamicGen}
-          />
-          <Button
-            label="Generate static Qr "
-            icon="pi pi-check"
-            onClick={onStaticGen}
-          />
-          <Button label="Send Bill" icon="pi pi-check" onClick={onSendBill} />
-
-          <Button icon="pi pi-times" onClick={close} />
+          <Button label="Generate Dynamic Qr" onClick={onDynamicGen} />
+          <Button label="Generate static Qr" onClick={onStaticGen} />
+          <Button label="Send Bill" onClick={onSendBill} />
+          <Button icon="pi pi-times" onClick={close} severity="warning" />
         </div>
       )}
       {staticQr && <GenerateQrForm />}

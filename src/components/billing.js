@@ -127,7 +127,12 @@ export default function SendBillForm() {
             />
           </div>
 
-          <Button label="Send Bill" icon="pi pi-send" type="submit" />
+          <Button
+            label="Send Bill"
+            icon="pi pi-send"
+            type="submit"
+            style={{ marginTop: "1%" }}
+          />
         </form>
       </Card>
     </div>
