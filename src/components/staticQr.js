@@ -95,11 +95,6 @@ export default function GenerateQrForm() {
           <div className="mt-4 text-center">
             <h3>Scan to Pay</h3>
             <img src={qrData.qr} alt="UPI QR" style={{ width: "250px" }} />
-            <p className="mt-2">
-              <a href={qrData.upiUrl} target="_blank" rel="noopener noreferrer">
-                {qrData.upiUrl}
-              </a>
-            </p>
           </div>
         )}
       </Card>
