@@ -32,7 +32,7 @@ export default function SendBillForm() {
     }
 
     try {
-      const url = `http://localhost:3000/auth/send/bill/${amount}/${encodeURIComponent(
+      const url = `https://unified-billing-api.vercel.app/auth/send/bill/${amount}/${encodeURIComponent(
         name
       )}/${encodeURIComponent(email)}`;
 

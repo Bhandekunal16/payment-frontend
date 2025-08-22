@@ -10,7 +10,7 @@ export default function DynamicQr() {
   const handleGenerate = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3000/auth/generateDynamicQR",
+        "https://unified-billing-api.vercel.app/auth/generateDynamicQR",
         {
           method: "GET",
           headers: {

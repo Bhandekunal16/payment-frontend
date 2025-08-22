@@ -16,7 +16,7 @@ export default function OtpForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/auth/userDetails", {
+      const response = await fetch("https://unified-billing-api.vercel.app/auth/userDetails", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

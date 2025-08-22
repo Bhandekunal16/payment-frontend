@@ -21,7 +21,7 @@ const Subscribe = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/auth/subscribe", {
+      const response = await fetch("https://unified-billing-api.vercel.app/auth/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const Subscribe = () => {
         setMessage([result.data.res]);
         window.location.reload()
       } else {
-        const r2 = await fetch("http://localhost:3000/auth/send/otp", {
+        const r2 = await fetch("https://unified-billing-api.vercel.app/auth/send/otp", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
