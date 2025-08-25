@@ -18,9 +18,9 @@ function App() {
   }, [subscribeFlag]);
 
   const items = [
-    { label: "Dynamic QR", icon: "pi pi-qrcode" },
-    { label: "Static QR", icon: "pi pi-qrcode" },
-    { label: "Send Bill", icon: "pi pi-send" },
+    { label: "Dynamic", icon: "pi pi-qrcode" },
+    { label: "Static", icon: "pi pi-qrcode" },
+    { label: "Bill", icon: "pi pi-send" },
   ];
 
   return (
@@ -42,6 +42,8 @@ function App() {
             model={items}
             activeIndex={activeIndex}
             onTabChange={(e) => setActiveIndex(e.index)}
+            className="bottom-nav"
+          
           />
 
           {activeIndex === 0 && <DynamicQr />}
