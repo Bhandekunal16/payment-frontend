@@ -43,7 +43,6 @@ function App() {
             activeIndex={activeIndex}
             onTabChange={(e) => setActiveIndex(e.index)}
             className="bottom-nav"
-          
           />
 
           {activeIndex === 0 && <DynamicQr />}
