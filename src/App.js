@@ -21,7 +21,6 @@ function App() {
     { label: "Dynamic QR", icon: "pi pi-qrcode" },
     { label: "Static QR", icon: "pi pi-qrcode" },
     { label: "Send Bill", icon: "pi pi-send" },
-    { label: "Close", icon: "pi pi-times" },
   ];
 
   return (
@@ -48,7 +47,6 @@ function App() {
           {activeIndex === 0 && <DynamicQr />}
           {activeIndex === 1 && <GenerateQrForm />}
           {activeIndex === 2 && <SendBillForm />}
-          {activeIndex === 3 && <h3>Closed. Choose another action.</h3>}
         </>
       )}
     </div>
